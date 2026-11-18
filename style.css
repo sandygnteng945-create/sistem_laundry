@@ -1,0 +1,601 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f1f5fc;
+    color: #18345e;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 245px;
+    height: 100vh;
+    background: linear-gradient(180deg, #103c7b, #082653);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.brand-icon {
+    font-size: 55px;
+    margin-bottom: 5px;
+}
+
+.brand h2 {
+    font-size: 29px;
+}
+
+.brand p {
+    color: #b8d4ff;
+    margin-top: 5px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #e5efff;
+    padding: 15px 17px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link span {
+    width: 25px;
+    font-size: 21px;
+    text-align: center;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: linear-gradient(90deg, #087bff, #1762e8);
+    color: white;
+    transform: translateX(4px);
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    text-align: center;
+    padding: 30px 5px;
+    color: #c7dcff;
+    background: linear-gradient(145deg, #1556a4, #0b3269);
+    border-radius: 15px;
+}
+
+.washing-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+/* MAIN */
+.main-content {
+    margin-left: 245px;
+    min-height: 100vh;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.topbar h3 {
+    font-size: 23px;
+    color: #123c78;
+}
+
+.topbar p {
+    color: #8292a9;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.date {
+    font-size: 14px;
+    color: #36577e;
+}
+
+.admin-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: #087bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+}
+
+/* BANNER DASHBOARD */
+.welcome-banner {
+    min-height: 230px;
+    border-radius: 23px;
+    padding: 35px 45px;
+    background: linear-gradient(120deg, #0864e8, #268cff);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(25,105,220,0.18);
+}
+
+.banner-content h1 {
+    font-size: 35px;
+    margin: 13px 0;
+}
+
+.banner-content p {
+    font-size: 16px;
+    color: #e3efff;
+}
+
+.banner-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c9e1ff;
+    font-weight: bold;
+}
+
+.banner-line {
+    width: 90px;
+    height: 4px;
+    background: white;
+    border-radius: 10px;
+    margin-top: 23px;
+}
+
+.banner-image {
+    font-size: 100px;
+    margin-right: 35px;
+}
+
+/* JUDUL BAGIAN */
+.section-heading {
+    margin: 30px 0 20px;
+}
+
+.section-heading h2 {
+    font-size: 21px;
+    color: #183d70;
+}
+
+.section-heading p {
+    color: #8b9bb1;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* KARTU STATISTIK */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.stat-card {
+    min-height: 160px;
+    background: white;
+    border-radius: 19px;
+    padding: 23px 17px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 5px 18px rgba(35,65,110,0.07);
+    border: 1px solid #edf1f8;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-7px);
+}
+
+.stat-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.stat-info h3 {
+    font-size: 14px;
+    color: #49617f;
+    margin-bottom: 10px;
+}
+
+.stat-info h1 {
+    font-size: 29px;
+    color: #153b72;
+    overflow-wrap: anywhere;
+}
+
+.stat-info p {
+    color: #98a8bd;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.blue .stat-icon {
+    background: #e2efff;
+}
+
+.purple .stat-icon {
+    background: #f0e6ff;
+}
+
+.green .stat-icon {
+    background: #d9f9f1;
+}
+
+.orange .stat-icon {
+    background: #fff0dc;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: auto;
+    padding: 25px 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #71849f;
+    font-size: 13px;
+}
+
+/* HALAMAN PELANGGAN */
+.page-banner {
+    background: linear-gradient(120deg, #0864e8, #399bff);
+    padding: 28px 35px;
+    border-radius: 18px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-banner h1 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.page-banner p {
+    color: #e1efff;
+    font-size: 14px;
+}
+
+.page-banner-icon {
+    font-size: 65px;
+}
+
+.customer-form.card,
+.customer-table.card {
+    background: white;
+    padding: 25px;
+    border-radius: 17px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(35,65,110,0.06);
+    border: 1px solid #edf1f8;
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 25px;
+}
+
+.heading-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: #e5f0ff;
+    color: #087bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.card-heading h2 {
+    font-size: 19px;
+    color: #183d70;
+}
+
+.card-heading p {
+    color: #91a0b5;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #365477;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dce5f0;
+    border-radius: 9px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    background: #f9fbff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #087bff;
+    box-shadow: 0 0 0 3px rgba(8,123,255,0.10);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.save-button {
+    margin-top: 20px;
+    padding: 13px 23px;
+    background: linear-gradient(90deg, #087bff, #1762e8);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    transform: translateY(-2px);
+}
+
+.alert-error {
+    background: #fff0f0;
+    color: #dc3545;
+    border: 1px solid #ffcaca;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.customer-table table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 550px;
+}
+
+.customer-table th {
+    background: #edf5ff;
+    color: #23528b;
+    font-size: 13px;
+    text-align: left;
+    padding: 16px;
+}
+
+.customer-table td {
+    padding: 16px;
+    border-bottom: 1px solid #edf1f7;
+    font-size: 13px;
+    color: #526984;
+}
+
+.customer-table tbody tr:hover {
+    background: #f7faff;
+}
+
+.customer-name {
+    color: #183d70 !important;
+    font-weight: 600;
+}
+
+.empty-data {
+    text-align: center;
+    padding: 35px !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 75px;
+        padding: 20px 8px;
+    }
+
+    .brand h2,
+    .brand p,
+    .sidebar-bottom p {
+        display: none;
+    }
+
+    .brand-icon {
+        font-size: 35px;
+    }
+
+    .nav-link {
+        justify-content: center;
+        padding: 14px 5px;
+        font-size: 0;
+    }
+
+    .nav-link span {
+        font-size: 22px;
+    }
+
+    .sidebar-bottom {
+        padding: 15px 3px;
+    }
+
+    .washing-icon {
+        font-size: 30px;
+    }
+
+    .main-content {
+        margin-left: 75px;
+        padding: 18px 12px;
+    }
+
+    .welcome-banner {
+        padding: 25px 20px;
+        min-height: 190px;
+    }
+
+    .banner-content h1 {
+        font-size: 24px;
+    }
+
+    .banner-content p {
+        font-size: 13px;
+    }
+
+    .banner-image {
+        font-size: 55px;
+        margin: 0;
+    }
+
+    .topbar-right .date {
+        display: none;
+    }
+
+    .stats-container,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .page-banner {
+        padding: 22px 18px;
+    }
+
+    .page-banner h1 {
+        font-size: 21px;
+    }
+
+    .customer-form.card,
+    .customer-table.card {
+        padding: 18px;
+    }
+
+    .footer {
+        flex-direction: column;
+        font-size: 11px;
+    }
+}
+
+/* STATUS CUCIAN */
+
+.status-label {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-proses {
+    background: #fff0d6;
+    color: #c47a00;
+}
+
+.status-selesai {
+    background: #d9f8e8;
+    color: #16834c;
+}
+
+.status-diambil {
+    background: #dceaff;
+    color: #2463c5;
+}
+
+.status-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 190px;
+}
+
+.status-form select {
+    padding: 9px;
+    border: 1px solid #dce3ee;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    min-width: 95px;
+}
+
+.status-form .save-button {
+    padding: 9px 14px;
+    margin: 0;
+    white-space: nowrap;
+}
